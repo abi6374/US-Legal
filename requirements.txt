@@ -15,7 +15,8 @@ requests==2.31.0
 torch==2.5.1                # CPU version, no +cpu suffix
 transformers==4.56.0
 spacy==3.6.1
-blis==0.7.9                 # Prebuilt wheel
+# Try a different blis version or let spacy handle it
+# blis==0.7.9
 en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
 
 # Tokenization & processing
