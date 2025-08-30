@@ -1,19 +1,24 @@
+# Build essentials
 pip>=25.2
 setuptools>=70.0.0
 wheel
 
+# Core backend
 fastapi==0.116.1
 uvicorn[standard]
 pydantic==2.11.7
-transformers==4.56.0
-torch==2.8.0
-spacy==3.6.1
-blis==0.7.11
-en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
-
 requests
 python-multipart
 starlette==0.47.3
+
+# NLP + ML
+transformers==4.56.0
+torch==2.5.1+cpu       # stable CPU-only PyTorch for Render
+spacy==3.7.5
+# don’t pin blis, spacy pulls the right one
+en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
+
+# Tokenization & text processing
 sentencepiece
 protobuf
 tokenizers
@@ -23,9 +28,10 @@ regex
 packaging
 typing_extensions
 
+# LangChain ecosystem
 langchain
-langchain_core
-langchain_community
-langchain_groq
-langchain_google_genai
+langchain-core
+langchain-community
+langchain-groq
+langchain-google-genai
 faiss-cpu
