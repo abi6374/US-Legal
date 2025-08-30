@@ -36,4 +36,4 @@ langchain-groq==0.0.1
 langchain-google-genai==0.0.1
 
 # Vector search / embeddings
-faiss-cpu==1.7.4
+faiss-cpu
