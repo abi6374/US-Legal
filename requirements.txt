@@ -1,20 +1,34 @@
-fastapi
-uvicorn
-pydantic
-transformers
-torch
-spacy
-requests
-python-multipart
-starlette
+# Ensure pip/setuptools/wheel are updated so wheels are used instead of source builds
+pip>=25.2
+setuptools>=70.0.0
+wheel
+
+# Core backend
+fastapi==0.103.1
+uvicorn[standard]==0.23.2
+pydantic==2.3.0
+starlette==0.27.0
+python-multipart==0.0.6
+requests==2.31.0
+
+# NLP + ML stack
+transformers==4.33.1
+torch==2.0.1
+spacy==3.6.1
+blis==0.7.11    # ✅ prevents Render from trying to compile it
 en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl
-sentencepiece
-protobuf
-tokenizers
-numpy
-tqdm
-regex
-packaging
-typing_extensions
-langchain
-langchain_core
+
+# Tokenization & text processing
+sentencepiece==0.1.99
+protobuf==4.24.2
+tokenizers==0.13.3
+numpy==1.25.2
+tqdm==4.66.1
+regex==2023.8.8
+packaging==23.1
+typing_extensions==4.7.1
+
+# LangChain ecosystem (latest stable instead of 0.0.1)
+langchain==0.2.5
+langchain-core==0.2.5
+langchain-community==0.2.5
